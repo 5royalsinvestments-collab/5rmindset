@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>5R Mindset — Youth Sports Mental-Game Journals</title>
 <meta name="description" content="Confidence, focus, and mental toughness journals for young athletes. Built on the 5R Method. Stats fade. Character doesn't.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2316284f'/%3E%3Ctext x='50' y='70' font-family='Arial' font-size='54' font-weight='bold' fill='%23f5a623' text-anchor='middle'%3E5R%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="5R Mindset — Youth Sports Mental-Game Journals">
+<meta property="og:description" content="Confidence, focus & mental toughness for young athletes — a few minutes a day. Stats fade. Character doesn't.">
+<meta property="og:url" content="https://5rmindset.com">
+<meta name="twitter:card" content="summary_large_image">
 <style>
   :root{ --navy:#16284f; --navy2:#1e3a8a; --gold:#f5a623; --ink:#1a2236; --bg:#f6f8fc; --line:#e4e9f3; --mut:#5c6783; }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -13,7 +19,8 @@
   .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
   a{color:inherit}
   .badge{display:inline-block;background:var(--gold);color:var(--navy);font-weight:900;border-radius:8px;padding:5px 12px;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase}
-  .btn{display:inline-block;border:0;border-radius:10px;padding:13px 24px;font-size:16px;font-weight:800;cursor:pointer;text-decoration:none}
+  .btn{display:inline-block;border:0;border-radius:10px;padding:13px 24px;font-size:16px;font-weight:800;cursor:pointer;text-decoration:none;transition:transform .12s,filter .12s}
+  .btn:hover{transform:translateY(-1px)}
   .btn-gold{background:var(--gold);color:var(--navy)} .btn-gold:hover{filter:brightness(1.05)}
   .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
   /* nav */
@@ -22,40 +29,53 @@
   nav .brand{font-weight:900;font-size:18px;letter-spacing:.02em}
   nav .links a{margin-left:22px;color:#cdd9f3;font-size:14.5px;font-weight:600;text-decoration:none}
   nav .links a:hover{color:#fff} nav .links a.cta{color:var(--navy);background:var(--gold);padding:8px 14px;border-radius:8px}
-  @media(max-width:720px){ nav .links a{margin-left:13px;font-size:13px} nav .brand{font-size:16px} }
+  @media(max-width:720px){ nav .links a{margin-left:13px;font-size:13px} nav .links a.hidem{display:none} nav .brand{font-size:16px} }
   /* hero */
-  .hero{background:linear-gradient(160deg,#16284f,#1e3a8a);color:#fff;padding:64px 0 72px;text-align:center}
+  .hero{background:linear-gradient(160deg,#16284f,#1e3a8a);color:#fff;padding:64px 0 30px;text-align:center;position:relative;overflow:hidden}
   .hero h1{font-size:46px;line-height:1.1;font-weight:800;margin:16px auto 14px;max-width:780px}
   .hero h1 .hl{color:var(--gold)}
   .hero p.sub{color:#dbe6fb;font-size:19px;max-width:620px;margin:0 auto 26px}
   .hero .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-  .hero .tag{color:#9fb6e6;font-size:13px;margin-top:22px;font-weight:600;letter-spacing:.05em}
-  @media(max-width:720px){ .hero h1{font-size:32px} }
+  .hero .tag{color:#9fb6e6;font-size:13px;margin-top:22px;font-weight:700;letter-spacing:.14em}
+  @media(max-width:720px){ .hero h1{font-size:33px} .hero p.sub{font-size:17px} }
+  /* trust bar */
+  .trust{background:#0f1b38;color:#bcd0f5}
+  .trust .wrap{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;padding:14px 20px;font-size:13.5px;font-weight:600}
+  .trust b{color:#fff}
+  @media(max-width:560px){ .trust .wrap{gap:14px;font-size:12.5px} }
   /* method */
-  .method{background:#fff;padding:46px 0;text-align:center;border-bottom:1px solid var(--line)}
+  .method{background:#fff;padding:48px 0;text-align:center;border-bottom:1px solid var(--line)}
   .method h2{color:var(--navy);font-size:26px}.method p.s{color:var(--mut);max-width:560px;margin:8px auto 22px}
   .rrow{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
   .rpill{background:#16284f;color:#fff;border-radius:30px;padding:10px 18px;font-weight:700;font-size:15px}
   .rpill b{color:var(--gold)}
   /* sections */
-  section{padding:54px 0}
+  section{padding:56px 0}
   .h2c{text-align:center;font-size:30px;color:var(--navy)}
-  .subc{text-align:center;color:var(--mut);max-width:620px;margin:8px auto 32px}
-  .jgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .jcard{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 16px rgba(12,22,48,.05)}
-  .jcard .top{padding:18px 18px 0}
-  .jcard .sport{font-size:12px;font-weight:800;color:var(--gold);text-transform:uppercase;letter-spacing:.05em}
-  .jcard h3{color:var(--navy);font-size:18px;margin:6px 0 6px;line-height:1.25}
-  .jcard p{color:var(--mut);font-size:14px;flex:1;padding:0 18px}
-  .jcard .foot{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;margin-top:12px;border-top:1px solid var(--line)}
-  .jcard .price{font-weight:800;color:var(--navy);font-size:18px}
-  .jcard .price small{font-weight:600;color:var(--mut);font-size:12px}
-  .jcard .buy{background:#eaf0ff;color:var(--navy2);border:0;border-radius:8px;padding:9px 15px;font-weight:700;font-size:14px;cursor:pointer;text-decoration:none}
-  .jcard.flag{border-color:var(--gold);box-shadow:0 6px 22px rgba(245,166,35,.18)}
+  .subc{text-align:center;color:var(--mut);max-width:620px;margin:8px auto 34px}
+  .jgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .jcard{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 18px rgba(12,22,48,.06);transition:transform .15s,box-shadow .15s}
+  .jcard:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(12,22,48,.12)}
+  /* book-cover graphic */
+  .jcover{aspect-ratio:7/5;position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:16px 16px 16px 22px;color:#fff;background:linear-gradient(150deg,var(--c1),var(--c2))}
+  .jcover:before{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;background:rgba(0,0,0,.22)}
+  .jcover:after{content:"";position:absolute;left:7px;top:0;bottom:0;width:3px;background:rgba(255,255,255,.18)}
+  .jcover .ceyebrow{font-size:10.5px;font-weight:800;letter-spacing:.12em;opacity:.9}
+  .jcover .cicon{font-size:30px;line-height:1}
+  .jcover .ctitle{font-size:21px;font-weight:800;line-height:1.12;margin-top:4px}
+  .jcover .cbot{font-size:11px;font-weight:600;opacity:.92;letter-spacing:.02em}
+  .jcover .cstar{position:absolute;top:14px;right:14px;background:var(--gold);color:var(--navy);font-size:10px;font-weight:900;border-radius:20px;padding:3px 9px;letter-spacing:.04em}
+  .jbody{padding:15px 17px 16px;display:flex;flex-direction:column;flex:1}
+  .jbody p{color:var(--mut);font-size:14px;flex:1}
+  .jbody .foot{display:flex;align-items:center;justify-content:space-between;margin-top:13px}
+  .jbody .price{font-weight:800;color:var(--navy);font-size:18px}
+  .jbody .price small{font-weight:600;color:var(--mut);font-size:12px}
+  .jbody .buy{background:#eaf0ff;color:var(--navy2);border:0;border-radius:8px;padding:9px 15px;font-weight:700;font-size:14px;cursor:pointer;text-decoration:none}
+  .jbody .buy:hover{background:var(--navy2);color:#fff}
   @media(max-width:760px){ .jgrid{grid-template-columns:1fr 1fr} }
   @media(max-width:520px){ .jgrid{grid-template-columns:1fr} }
   /* teams */
-  .teams{background:#16284f;color:#fff;border-radius:18px;padding:40px;text-align:center;margin-top:10px}
+  .teams{background:linear-gradient(150deg,#16284f,#22325c);color:#fff;border-radius:18px;padding:44px;text-align:center}
   .teams h2{font-size:26px}.teams p{color:#cdd9f3;max-width:580px;margin:10px auto 20px}
   /* capture */
   #free{background:linear-gradient(160deg,#1e3a8a,#16284f);color:#fff}
@@ -75,9 +95,9 @@
 <nav><div class="wrap">
   <div class="brand">🏆 5R MINDSET</div>
   <div class="links">
-    <a href="#journals">Journals</a>
-    <a href="#method">The Method</a>
-    <a href="#teams">For Teams</a>
+    <a href="#journals" class="hidem">Journals</a>
+    <a href="#method" class="hidem">The Method</a>
+    <a href="#teams" class="hidem">For Teams</a>
     <a href="#free" class="cta">Free Routine</a>
   </div>
 </div></nav>
@@ -93,6 +113,13 @@
   <div class="tag">REFLECT · RESET · REFOCUS · RISE · REPEAT</div>
 </div></header>
 
+<div class="trust"><div class="wrap">
+  <span>👟 <b>Ages 8–18</b></span>
+  <span>🏅 <b>Any sport</b></span>
+  <span>⏱️ <b>5 minutes a day</b></span>
+  <span>📓 <b>Created by a coach</b></span>
+</div></div>
+
 <section class="method" id="method"><div class="wrap">
   <span class="badge">The 5R Method</span>
   <h2 style="margin-top:12px">Five simple steps, for life</h2>
@@ -107,33 +134,78 @@
   <h2 class="h2c">The Journals</h2>
   <p class="subc">Sport-specific mental-game journals for young athletes — part journal, part coach, part keepsake. The perfect gift for the athlete in your life.</p>
   <div class="jgrid">
-    <div class="jcard flag"><div class="top"><div class="sport">★ Flagship · Any Sport</div><h3>The 5R Athlete Journal</h3></div>
-      <p>The signature mental-game & confidence journal — the full 5R Method for any young athlete.</p>
-      <div class="foot"><div class="price">$16.99 <small>paperback</small></div><a href="#free" class="buy">Notify me →</a></div></div>
-    <div class="jcard"><div class="top"><div class="sport">Fastpitch Softball</div><h3>Dugout Diary</h3></div>
-      <p>Confidence, mental toughness & team character for young softball players (girls).</p>
-      <div class="foot"><div class="price">$13.99</div><a href="#free" class="buy">Notify me →</a></div></div>
-    <div class="jcard"><div class="top"><div class="sport">Basketball</div><h3>Full Court Chronicles</h3></div>
-      <p>Focus and mental toughness on and off the court — for youth & AAU players.</p>
-      <div class="foot"><div class="price">$13.99</div><a href="#free" class="buy">Notify me →</a></div></div>
-    <div class="jcard"><div class="top"><div class="sport">Soccer</div><h3>Power on the Pitch</h3></div>
-      <p>Confidence and resilience for travel, club & youth soccer players.</p>
-      <div class="foot"><div class="price">$13.99</div><a href="#free" class="buy">Notify me →</a></div></div>
-    <div class="jcard"><div class="top"><div class="sport">Volleyball</div><h3>Dig Deep Diary</h3></div>
-      <p>Grit and team-first character for young volleyball players (girls).</p>
-      <div class="foot"><div class="price">$13.99</div><a href="#free" class="buy">Notify me →</a></div></div>
-    <div class="jcard"><div class="top"><div class="sport">Digital · Instant</div><h3>Game Day Pack</h3></div>
-      <p>A printable mindset pack — pre-game routine, focus & reflection sheets. Download instantly.</p>
-      <div class="foot"><div class="price">$14.00</div><a href="#free" class="buy">Notify me →</a></div></div>
+
+    <div class="jcard">
+      <div class="jcover" style="--c1:#1e3a8a;--c2:#16284f">
+        <span class="cstar">★ FLAGSHIP</span>
+        <div class="ceyebrow">5R MINDSET</div>
+        <div><div class="cicon">🏆</div><div class="ctitle">The 5R Athlete Journal</div></div>
+        <div class="cbot">Mental Game Journal · Any Sport</div>
+      </div>
+      <div class="jbody"><p>The signature confidence journal — the full 5R Method for any young athlete.</p>
+        <div class="foot"><span class="price">$16.99 <small>paperback</small></span><a href="#free" class="buy">Notify me →</a></div></div>
+    </div>
+
+    <div class="jcard">
+      <div class="jcover" style="--c1:#e6447a;--c2:#a8295a">
+        <div class="ceyebrow">5R MINDSET</div>
+        <div><div class="cicon">🥎</div><div class="ctitle">Dugout Diary</div></div>
+        <div class="cbot">Mental Game Journal · Fastpitch Softball</div>
+      </div>
+      <div class="jbody"><p>Confidence, toughness & team character for young softball players.</p>
+        <div class="foot"><span class="price">$13.99</span><a href="#free" class="buy">Notify me →</a></div></div>
+    </div>
+
+    <div class="jcard">
+      <div class="jcover" style="--c1:#ef7a2a;--c2:#c2541a">
+        <div class="ceyebrow">5R MINDSET</div>
+        <div><div class="cicon">🏀</div><div class="ctitle">Full Court Chronicles</div></div>
+        <div class="cbot">Mental Game Journal · Basketball</div>
+      </div>
+      <div class="jbody"><p>Focus and mental toughness on and off the court — youth & AAU.</p>
+        <div class="foot"><span class="price">$13.99</span><a href="#free" class="buy">Notify me →</a></div></div>
+    </div>
+
+    <div class="jcard">
+      <div class="jcover" style="--c1:#1f9d56;--c2:#15733e">
+        <div class="ceyebrow">5R MINDSET</div>
+        <div><div class="cicon">⚽</div><div class="ctitle">Power on the Pitch</div></div>
+        <div class="cbot">Mental Game Journal · Soccer</div>
+      </div>
+      <div class="jbody"><p>Confidence and resilience for travel, club & youth soccer players.</p>
+        <div class="foot"><span class="price">$13.99</span><a href="#free" class="buy">Notify me →</a></div></div>
+    </div>
+
+    <div class="jcard">
+      <div class="jcover" style="--c1:#7c4dff;--c2:#5a30c4">
+        <div class="ceyebrow">5R MINDSET</div>
+        <div><div class="cicon">🏐</div><div class="ctitle">Dig Deep Diary</div></div>
+        <div class="cbot">Mental Game Journal · Volleyball</div>
+      </div>
+      <div class="jbody"><p>Grit and team-first character for young volleyball players.</p>
+        <div class="foot"><span class="price">$13.99</span><a href="#free" class="buy">Notify me →</a></div></div>
+    </div>
+
+    <div class="jcard">
+      <div class="jcover" style="--c1:#0e8f9e;--c2:#0a6873">
+        <span class="cstar">⚡ DIGITAL</span>
+        <div class="ceyebrow">5R MINDSET</div>
+        <div><div class="cicon">📋</div><div class="ctitle">Game Day Pack</div></div>
+        <div class="cbot">Printable · Instant Download</div>
+      </div>
+      <div class="jbody"><p>Pre-game routine, focus & reflection sheets. Print at home, use today.</p>
+        <div class="foot"><span class="price">$14.00</span><a href="#free" class="buy">Notify me →</a></div></div>
+    </div>
+
   </div>
-  <p style="text-align:center;color:var(--mut);font-size:14px;margin-top:22px">📚 Journals launching on Amazon &amp; our store — <a href="#free" style="color:var(--navy2);font-weight:700">join the list</a> to be first to know (and grab the free routine now).</p>
+  <p style="text-align:center;color:var(--mut);font-size:14px;margin-top:26px">📚 Journals launching on Amazon &amp; our store — <a href="#free" style="color:var(--navy2);font-weight:700">join the list</a> to be first to know (and grab the free routine now).</p>
 </div></section>
 
 <section style="padding-top:0"><div class="wrap">
   <div class="teams" id="teams">
     <span class="badge">For Teams · Clubs · Schools</span>
     <h2 style="margin-top:12px">One order. The whole team.</h2>
-    <p>Coaches and athletic directors: equip every athlete with the mental game. Bulk pricing available for teams, clubs, leagues, and schools — a season-long character-building tool in every player's bag.</p>
+    <p>Coaches and athletic directors: equip every athlete with the mental game. Bulk pricing for teams, clubs, leagues, and schools — a season-long character-building tool in every player's bag.</p>
     <a href="mailto:The5Rmindset@gmail.com?subject=Bulk%20order%20inquiry%20—%205R%20Mindset&body=Hi%2C%20I'd%20like%20bulk%20pricing.%20Team%2Forg%3A%20____%20%7C%20Sport%3A%20____%20%7C%20Approx%20quantity%3A%20____" class="btn btn-gold">Request bulk pricing →</a>
   </div>
 </div></section>
