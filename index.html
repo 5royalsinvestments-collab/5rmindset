@@ -57,7 +57,10 @@
   .jcard{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 18px rgba(12,22,48,.06);transition:transform .15s,box-shadow .15s}
   .jcard:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(12,22,48,.12)}
   /* book-cover graphic */
-  .jcover{aspect-ratio:7/5;position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:16px 16px 16px 22px;color:#fff;background:linear-gradient(150deg,var(--c1),var(--c2))}
+  .jcover{aspect-ratio:39/50;position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:16px 16px 16px 22px;color:#fff;background:linear-gradient(150deg,var(--c1),var(--c2))}
+  .jcover.cimg{padding:0;background:#0e1b3a}
+  .jcover.cimg:before,.jcover.cimg:after{display:none}
+  .jcover.cimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
   .jcover:before{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;background:rgba(0,0,0,.22)}
   .jcover:after{content:"";position:absolute;left:7px;top:0;bottom:0;width:3px;background:rgba(255,255,255,.18)}
   .jcover .ceyebrow{font-size:10.5px;font-weight:800;letter-spacing:.12em;opacity:.9}
@@ -148,43 +151,27 @@
     </div>
 
     <div class="jcard">
-      <div class="jcover" style="--c1:#e6447a;--c2:#a8295a">
-        <div class="ceyebrow">5R MINDSET</div>
-        <div><div class="cicon">🥎</div><div class="ctitle">Dugout Diary</div></div>
-        <div class="cbot">Mental Game Journal · Fastpitch Softball</div>
-      </div>
+      <div class="jcover cimg"><img src="img/dugout-diary.webp" alt="Dugout Diary — fastpitch softball mental game journal" loading="lazy"></div>
       <div class="jbody"><p>Confidence, toughness & team character for young softball players.</p>
-        <div class="foot"><span class="price">$13.99</span><a href="https://www.etsy.com/listing/4312752220" target="_blank" rel="noopener" class="buy">Buy on Etsy →</a></div></div>
+        <div class="foot"><span class="price">$23.95</span><a href="https://www.etsy.com/listing/4312752220" target="_blank" rel="noopener" class="buy">Buy on Etsy →</a></div></div>
     </div>
 
     <div class="jcard">
-      <div class="jcover" style="--c1:#ef7a2a;--c2:#c2541a">
-        <div class="ceyebrow">5R MINDSET</div>
-        <div><div class="cicon">🏀</div><div class="ctitle">Full Court Chronicles</div></div>
-        <div class="cbot">Mental Game Journal · Basketball</div>
-      </div>
+      <div class="jcover cimg"><img src="img/full-court-chronicles.webp" alt="Full Court Chronicles — basketball mental game journal" loading="lazy"></div>
       <div class="jbody"><p>Focus and mental toughness on and off the court — youth & AAU.</p>
-        <div class="foot"><span class="price">$13.99</span><a href="#free" class="buy">Notify me →</a></div></div>
+        <div class="foot"><span class="price">$23.95</span><a href="#free" class="buy">Notify me →</a></div></div>
     </div>
 
     <div class="jcard">
-      <div class="jcover" style="--c1:#1f9d56;--c2:#15733e">
-        <div class="ceyebrow">5R MINDSET</div>
-        <div><div class="cicon">⚽</div><div class="ctitle">Power on the Pitch</div></div>
-        <div class="cbot">Mental Game Journal · Soccer</div>
-      </div>
+      <div class="jcover cimg"><img src="img/power-on-the-pitch.webp" alt="Power on the Pitch — soccer mental game journal" loading="lazy"></div>
       <div class="jbody"><p>Confidence and resilience for travel, club & youth soccer players.</p>
-        <div class="foot"><span class="price">$13.99</span><a href="https://www.etsy.com/listing/4316778159" target="_blank" rel="noopener" class="buy">Buy on Etsy →</a></div></div>
+        <div class="foot"><span class="price">$23.95</span><a href="https://www.etsy.com/listing/4316778159" target="_blank" rel="noopener" class="buy">Buy on Etsy →</a></div></div>
     </div>
 
     <div class="jcard">
-      <div class="jcover" style="--c1:#7c4dff;--c2:#5a30c4">
-        <div class="ceyebrow">5R MINDSET</div>
-        <div><div class="cicon">🏐</div><div class="ctitle">Dig Deep Diary</div></div>
-        <div class="cbot">Mental Game Journal · Volleyball</div>
-      </div>
+      <div class="jcover cimg"><img src="img/dig-deep-diary.webp" alt="Dig Deep Diary — volleyball mental game journal" loading="lazy"></div>
       <div class="jbody"><p>Grit and team-first character for young volleyball players.</p>
-        <div class="foot"><span class="price">$13.99</span><a href="#free" class="buy">Notify me →</a></div></div>
+        <div class="foot"><span class="price">$23.95</span><a href="#free" class="buy">Notify me →</a></div></div>
     </div>
 
     <div class="jcard">
